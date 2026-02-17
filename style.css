@@ -1,0 +1,237 @@
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    /* font-weight: bolder; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 10px 0; /* Reduced padding */
+    border-bottom: 3px solid #0056b3;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    height: 50px; /* Adjust size as needed */
+    margin-right: 15px;
+}
+
+.company-name {
+    font-size: 2em;
+    font-weight: bold;
+    color: #0056b3;
+    text-decoration: none !important;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+.hero-content {
+    text-align: center;
+    padding: 40px 0; /* Add padding to separate from nav */
+    /* background-color: #c6d3e6; */
+    background-color: #007bff;
+    
+    /* background: linear-gradient(white 49%, red 51%); */
+    margin-top: 10px; /* Space from navbar */
+}
+
+.hero-content h1 {
+    /* color: #0056b3; */
+    color: white;
+    font-size: 2.2em; /* Adjusted size */
+    margin: 0;
+}
+
+section {
+    padding: 40px 0;
+    background-color: #fff;
+    margin-bottom: 30px; /* Increased margin for better separation */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2em; /* Make category titles larger */
+    border-bottom: 2px solid #007bff; /* Add an underline effect */
+    display: inline-block; /* To make border-bottom only as wide as content */
+    padding-bottom: 10px;
+    margin-bottom: 30px; /* Increase margin after title */
+}
+
+
+.gallery {
+    display: grid;
+    /* Dynamic columns: at least 280px, grow to fill space. Max 2 columns enforced by max-width. */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px; /* Increased gap for better spacing */
+    padding: 20px 0;
+    width: 80%; /* Fill parent container */
+    /* max-width: 1860px; Limit overall gallery width to ensure a max of 2 columns */
+    margin: 20px auto; /* Center the gallery block and add vertical spacing */
+    justify-items: start; /* Align items to the start of their grid cell */
+}
+
+.gallery img {
+    width: 100%; /* Image fills its grid cell */
+    max-width: 400px; /* Increased max width for images */
+    height: 400px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+#contact p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+#contact a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.product-category-summary {
+    display: inline-block;
+    width: 280px; /* Adjust as needed */
+    margin: 20px;
+    vertical-align: top;
+}
+
+.product-category-summary img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.product-category-summary img:hover {
+    transform: scale(1.05);
+}
+
+.product-category-summary h3 {
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px 0;
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .navbar nav ul li {
+        margin: 5px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5em;
+    }
+
+    #services ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    #services ul li {
+        margin: 10px 0 !important;
+    }
+
+    .product-category-summary {
+        width: 90%;
+        margin: 20px auto;
+        display: block;
+    }
+
+    #contact div {
+        flex-direction: column;
+        width: 100% !important;
+    }
+
+    #contact div div {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+
+    #contact iframe {
+        width: 100% !important;
+        height: 200px !important;
+    }
+
+    footer div {
+        line-height: 150% !important;
+    }
+}
